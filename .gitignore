@@ -1,6 +1,6 @@
 *.zip
 *.exe
 *.tmp
-./tests/test.rb
+tests/test.rb
 interface.rb
 
