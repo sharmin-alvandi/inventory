@@ -1,10 +1,10 @@
-class MultiLocactionInventory
-  
-  require_relative 'product'
-  require './warehouse'
-  require  './order'
-  require './validate'
+require_relative 'product'
+require './warehouse'
+require  './order'
+require  './validate'
 
+class MultiLocactionInventory
+ 
   # Initialize Products array 
   # products_list = []
   $products_list = [{id: 100, name: "P1", price: 11.99}, {id: 101, name: "P2", price: 16.99}]
@@ -90,7 +90,7 @@ class MultiLocactionInventory
         while !valid_postalcode do
           puts "Warehouse's postal code(A1A 1A1): "
           w_location = gets.chomp()
-          if !Validate.postal_code(w_location)
+          if !Validate.postal_code?(w_location)
             puts "It's not a valid postal code! Try again." 
           else
             valid_postalcode = true
